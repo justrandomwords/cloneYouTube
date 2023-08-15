@@ -1,0 +1,162 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  padding: 8px 14px;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+
+  z-index: 2;
+}
+
+.include-tooltip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.include-tooltip:hover .header-tooltip {
+  opacity: 1;
+}
+
+.header-tooltip {
+  position: absolute;
+  padding: 10px;
+  bottom: -58px;
+  background-color: rgb(90, 90, 90);
+  color: white;
+  font-size: 12px;
+  border-radius: 3px;
+  white-space: nowrap;
+  pointer-events: none;  
+  transition: opacity 0.15s;
+  
+  opacity: 0;
+}
+
+.main_buttons-card {
+  display: flex;
+  box-sizing: border-box;
+  column-gap: 15px;
+}
+
+.search-card {
+  flex: 1;
+  max-width: 655px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 65
+  0px;
+  margin: 0px 0px 0px 35px;
+}
+
+.personal_buttons-card {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 158px;
+}
+
+.header-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.header-button:hover {
+  background-color: rgb(48, 48, 48);
+}
+.notification-count {
+  position: absolute;
+  background-color: rgb(190, 0, 0);
+  color: white;
+  font-size: 12px;
+  border: 2px solid var(--background-color);
+  border-radius: 50px;
+  padding: 0px 5px;
+  top: 5px;
+  left: 20px;
+}
+
+.google_profile_photo-card {
+  width: 35px;
+  height: 35px;
+  padding: 0px 15px;
+  cursor: pointer;
+}
+
+.youtube-logo {
+  position: relative;
+  width: 90px;
+  cursor: pointer;
+}
+
+.youtube-localisation {
+  position: absolute;
+  top: 4px; left: 94px;
+  font-size: 10px;
+  color: rgb(165, 165, 165);
+}
+
+.search {
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 50px 0px 0px 50px;
+  border: 1px solid rgb(48, 48, 48);
+}
+.search:focus {
+  border-color: rgb(0, 113, 195);
+  outline: none;
+}   
+
+.search-button {
+  background-color: var(--main-color);
+  border-radius: 0px 50px 50px 0px;
+  border: 1px solid rgb(48, 48, 48);
+  width: 75px;
+  cursor: pointer;
+}
+
+.microphone-button {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.microphone-button:hover {
+  background-color: var(--highlighted-color)
+}
+
+.search_button-logo {
+  height: 25px;
+  fill: white;
+}
+
+.microphone-logo {
+  height: 100%;
+  filter: brightness(0) invert(1);
+}
+
+.google_profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}

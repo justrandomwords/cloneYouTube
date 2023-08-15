@@ -1,0 +1,26 @@
+:root {
+  --background-color: rgb(15, 15, 15);
+  --main-color: rgba(255, 255, 255, 0.08);
+  --highlighted-color: rgb(55, 55, 55);
+}
+
+body {
+  background-color: var(--background-color);
+  color: white;
+  font: 14px Roboto, Arial;
+  margin: 135px 30px 30px 260px;
+
+  height: 1000px;
+}
+
+input {
+  font-family: Roboto, Arial;
+}
+
+button {
+  font-family: Roboto, Arial;
+}
+
+.fixed-layout {
+  z-index: 10;
+}

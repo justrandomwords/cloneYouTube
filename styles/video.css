@@ -1,0 +1,106 @@
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 50px;
+}
+
+.video-preview {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.preview_image-container {
+  position: relative;
+  border-radius: 10px;
+}
+
+.timecode {
+  position: absolute;
+  background-color: var(--background-color);
+  font: bold 12px Arial;
+  border-radius: 5px;
+  padding: 2px 5px;
+  bottom: 7px;
+  right: 4px;
+}
+
+.video_info-preview {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+
+.preview-channel-photo {
+  margin: 10px 0px;
+}
+
+.preview-info {
+  margin: 10px 0px 10px 10px;
+}
+
+.preview-image {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.channel-photo {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.channel-name {
+  color: rgb(170, 170, 170);
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.preview-title {
+  font-weight: bold;
+  margin: 0px;
+  transition: max-height 0.3s;
+}
+
+.a {
+}
+
+@keyframes test {
+  0% {
+    height: 50px;
+    opacity: 1;
+  }
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
+
+}
+
+.preview-statistic {
+  color: rgb(170, 170, 170);
+  margin: 0px;
+}
+
+.chanel-subscriders {
+  display: none;
+}
+
+/*.preview-channel-photo:hover + 
+.preview-info .a,
+.preview-channel-photo:hover + 
+.preview-info .preview-statistic {
+  opacity: 0;
+  height: 0;
+}
+
+.preview-channel-photo:hover + 
+.preview-info .channel-name {
+  color: white;
+}
+
+.preview-title,
+.preview-statistic {
+  transition: opacity 0.15s, height 10s;
+}*/

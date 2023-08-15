@@ -1,0 +1,28 @@
+.video_theme-container {
+  position: fixed;
+  top: 56px; right: 0; left: 250px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  column-gap: 10px;
+  padding: 8px 10px;
+  background-color: var(--background-color); 
+  z-index: 1;
+}
+
+.video_theme-button {
+  flex: 0 0 auto; 
+  background-color: var(--main-color);
+  color: white;
+  font-size: 14px;
+  border: transparent;
+  border-radius: 7px;
+  padding: 8px 12px;
+  margin: 5px 0px;
+  cursor: pointer;
+}
+
+.selected_video_theme-button {
+  background-color: white;
+  color: var(--background-color);
+}

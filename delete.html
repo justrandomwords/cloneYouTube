@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .new-class {
+            background-color: red;
+        }
+
+        .selected_video_theme-button {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">Натисніть мене</button>
+    <button class="video_theme-button">Натисніть мене</button>
+    <button class="video_theme-button">Натисніть мене</button>
+    <button class="video_theme-button">Натисніть мене</button>
+    <button class="video_theme-button">Натисніть мене</button>
+    <button class="video_theme-button">Натисніть мене</button>
+    <button class="video_theme-button">Натисніть мене</button>
+
+
+    <script>
+        const button = document.getElementById("myButton");
+
+        button.addEventListener("click", function() {
+            button.classList.add("new-class");
+        });
+
+        const themeVideoButtons = document.querySelectorAll('.video_theme-button');
+        themeVideoButtons.forEach(button => {
+            button.addEventListener("click", (e) => {
+                themeVideoButtons.forEach(element => {
+                    element.classList.remove('selected_video_theme-button');
+                });
+                button.classList.add('selected_video_theme-button');
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+.menu_buttons-card { 
+  position: fixed;   
+  top: 55px; left: 10px;
+  height: 94svh;
+  width: 240px;
+  /*: hidden;*/
+  overflow-y:scroll;
+}
+/*::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(150, 150, 150);
+  border-radius: 10px;
+}*/
+
+.menu_card-section {
+  padding: 13px 13px 13px 0px;
+  border-bottom: 1px solid var(--highlighted-color);
+}
+
+.section-name {
+  font-size: 16px;
+  padding: 2px 14px 6px 14px;
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  padding: 8px 12px;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: background-color 0.05s;
+}
+.menu-button:hover{
+  background-color: var(--main-color);
+}
+
+.seleted_menu-button{
+  background-color: var(--main-color);
+  transition: background-color 0.05s;
+}
+.seleted_menu-button:hover{
+  background-color: var(--highlighted-color);
+}
+
+.button-icon {
+  height: 24px;
+  aspect-ratio: 1/1;
+  fill: white;
+}
+
+.button-label {
+  font-size: 14px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
