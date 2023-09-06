@@ -2,13 +2,14 @@
   --background-color: rgb(15, 15, 15);
   --main-color: rgba(255, 255, 255, 0.08);
   --highlighted-color: rgb(55, 55, 55);
+  --height-time: 0.35s;
+  --opacity-time: 0.2s;
 }
 
 body {
   background-color: var(--background-color);
   color: white;
   font: 14px Roboto, Arial;
-  margin: 135px 30px 30px 260px;
 
   height: 1000px;
 }
