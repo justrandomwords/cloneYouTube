@@ -350,21 +350,15 @@
           <img class="preview-image" src="thumbnails\preview1.webp">
           <div class="timecode">8:48</div>
         </div>
-        <div class="video_info-preview">
+        <div class="video_info-preview" id="testy">
           <div class="preview-channel-photo">
             <img class="channel-photo" src="thumbnails\channel_photo1.jpg">
           </div>
           <div class="preview-info">
-            <div class="a">
-              <p class="preview-title">Чи важко насправді зробити ядерну бомбу?</p>
-            </div>
-            <div>
-              <p class="channel-name">Riddle UA</p>
-            </div>
-            <div>
-              <p class="preview-statistic">31 тис. переглядів &#183; 1 день тому</p>
-            </div>
-            <p class="chanel-subscriders">140 млн.</p> 
+            <p class="preview-title">Чи важко насправді зробити ядерну бомбу?</p>
+            <p class="channel-name">Riddle UA</p>
+            <p class="preview-statistic">31 тис. переглядів &#183; 1 день тому</p>
+            <p class="chanel-subscriders">3,57 млн користувачів</p> 
           </div>
         </div>
       </a>
@@ -382,6 +376,7 @@
             <p class="preview-title">Хто Ти? Ірина Гатун х Сергій Середа</p>
             <p class="channel-name">SEREDA</p>
             <p class="preview-statistic">13 тис. переглядів &#183; 9 годин тому</p> 
+            <p class="chanel-subscriders">17,2 тис. користувачів</p> 
           </div>
         </div>
       </a>
@@ -399,6 +394,7 @@
             <p class="preview-title">#85 Меми війни | ТОП 50 відео приколів Тік Ток Квітень 2023</p>
             <p class="channel-name">РЕКТОП</p>
             <p class="preview-statistic">32 тис. переглядів &#183; 3 місяці тому</p> 
+            <p class="chanel-subscriders">14,6 тис. користувачів</p> 
           </div>
         </div>
       </a>
@@ -416,6 +412,7 @@
             <p class="preview-title">ТНМК та ХЕЙТСПІЧ ОЦІНЮЮТЬ ПІСНІ. НОВА УКРАЇНСЬКА МУЗИКА ВІДСТІЙ? Шлягер Краш ШОУ №1</p>
             <p class="channel-name">#ШоЗаСонг</p>
             <p class="preview-statistic">50 тис. переглядів &#183; 11 днів тому</p> 
+            <p class="chanel-subscriders">147 тис. користувачів</p> 
           </div>
         </div>
       </a>
@@ -433,6 +430,7 @@
             <p class="preview-title">З ЯКИХ ФІЛЬМІВ ЛЕГЕНДАРНІ МЕМИ?</p>
             <p class="channel-name">Загін Кіноманів</p>
             <p class="preview-statistic">352 тис. переглядів &#183; 1 місяць тому</p> 
+            <p class="chanel-subscriders">620 тис. користувачів</p> 
           </div>
         </div>
       </a>
@@ -450,6 +448,7 @@
             <p class="preview-title">Освіта в окупації. Віталій Кім. Снігурівка | 20:23 #10 - Спецвипуск</p>
             <p class="channel-name">Женя Янович</p>
             <p class="preview-statistic">187 тис. переглядів &#183; 4 дні тому</p> 
+            <p class="chanel-subscriders">136 тис. користувачів</p> 
           </div>
         </div>
       </a>
@@ -459,6 +458,16 @@
     function openUrl(url) {
       window.location.href = url;
     }
+
+    const menuButtons = document.querySelectorAll('.menu-button');
+    menuButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        menuButtons.forEach(element => {
+          element.classList.remove('seleted_menu-button');
+        });
+        button.classList.add('seleted_menu-button');
+      })
+    });
 
     const themeVideoButtons = document.querySelectorAll('.video_theme-button');
     themeVideoButtons.forEach(button => {
@@ -470,13 +479,26 @@
       })
     });
 
-    const menuButtons = document.querySelectorAll('.menu-button');
-    menuButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        menuButtons.forEach(element => {
-          element.classList.remove('seleted_menu-button');
-        });
-        button.classList.add('seleted_menu-button');
+    const previewInformations = document.querySelectorAll(".video_info-preview");
+    previewInformations.forEach(element => {
+      const selectedArea = element.querySelector(".preview-channel-photo");
+      const chanelName = element.querySelector(".channel-name");
+      const previewTitle = element.querySelector(".preview-title");
+      const previewStatistic = element.querySelector(".preview-statistic");
+      const chanelSubscriders = element.querySelector(".chanel-subscriders");
+
+      selectedArea.addEventListener("mouseover", () => {
+        chanelName.classList.add("subscriders-mode")
+        previewTitle.classList.add("hided");
+        previewStatistic.classList.add("hided");
+        chanelSubscriders.classList.add("showed");
+      })
+
+      selectedArea.addEventListener("mouseleave", () => {
+        chanelName.classList.remove("subscriders-mode")
+        previewTitle.classList.remove("hided");
+        previewStatistic.classList.remove("hided");
+        chanelSubscriders.classList.remove("showed");
       })
     })
   </script>
