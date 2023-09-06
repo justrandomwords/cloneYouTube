@@ -6,14 +6,6 @@
   /*: hidden;*/
   overflow-y:scroll;
 }
-/*::-webkit-scrollbar {
-  width: 8px;
-  background-color: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background-color: rgb(150, 150, 150);
-  border-radius: 10px;
-}*/
 
 .menu_card-section {
   padding: 13px 13px 13px 0px;
